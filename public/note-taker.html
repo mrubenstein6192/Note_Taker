@@ -12,6 +12,7 @@
   <title>Notes</title>
 </head>
 
+<!-- navar to access the home page -->
 <body>
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="/">Home</a>
@@ -66,6 +67,7 @@
             var list = $("#list");
             var oneNote = $("<li class = 'list-group-item'>");
 
+              //display the data
             oneNote.append(
               $("<p>").text("#" + (i + 1) + ": "),
               $("<hr>"),
@@ -80,6 +82,7 @@
         });
     };
 
+    //submit button for adding a note
     $("#submit").on("click", function (event) {
       event.preventDefault();
 
@@ -105,6 +108,7 @@
     })
 
 
+    //delete button for removing a note
     $(document).on("click", ".delete", function (event) {
       event.preventDefault();
           var noteID = $(this).parent().attr("data");
